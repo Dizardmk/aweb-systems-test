@@ -1,0 +1,105 @@
+/* basic normalize */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-style: normal;
+  background-color: rgba(220, 220, 220, 0.2);
+}
+.list {
+  list-style: none;
+}
+
+/* styles */
+.cards-section {
+  position: relative;
+}
+.container {
+  height: 475px;
+  padding-top: 20px;
+  background: url(../images/part1.svg) no-repeat 1150px 200px,
+    url(../images/target1.svg) no-repeat 350px 270px,
+    url(../images/bar-graph1.svg) no-repeat 550px 10px,
+    url(../images/shout-megaphone1.svg) no-repeat 820px 70px;
+}
+.container::before {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  width: 1049px;
+  height: 222px;
+  content: "";
+  background: url(../images/vector1.svg) no-repeat;
+}
+
+/* ===== cards ===== */
+.cards {
+  display: flex;
+}
+
+/* ===== cards item ===== */
+.cards__item {
+  width: 188px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px 0px rgba(195, 229, 254, 0.5);
+  margin-left: 20px;
+  padding: 20px;
+}
+
+/* ===== cards svg ===== */
+.cards__item::before {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
+  margin: 10px 0 20px;
+}
+.cards__item:nth-child(1)::before {
+  background-image: url(../images/statistics1.svg);
+}
+.cards__item:nth-child(2)::before {
+  background-image: url(../images/calendar1.svg);
+}
+.cards__item:nth-child(3)::before {
+  background-image: url(../images/sitemap1.svg);
+}
+.cards__item:nth-child(4)::before {
+  background-image: url(../images/report1.svg);
+}
+.cards__item:nth-child(5)::before {
+  background-image: url(../images/clipboard1.svg);
+}
+
+/* ===== cards margin ===== */
+.cards__item:nth-child(1) {
+  margin: 60px 0 0 100px;
+}
+.cards__item:nth-child(2) {
+  margin-top: 5px;
+}
+.cards__item:nth-child(3) {
+  margin-top: 70px;
+}
+.cards__item:nth-child(4) {
+  margin-top: 170px;
+}
+.cards__item:nth-child(5) {
+  margin-top: 30px;
+}
+
+/* ===== cards text ===== */
+.cards__text {
+  font-weight: 500;
+}
+.cards__accent {
+  color: orange;
+}
